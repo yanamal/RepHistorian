@@ -1,7 +1,8 @@
 from stackapi import StackAPI
 import json
+import APIkey
 
-SITE = StackAPI('stackoverflow')
+SITE = StackAPI('stackoverflow', key=APIkey.key)
 SITE.max_pages = 300
 
 print SITE.page_size, SITE.max_pages
